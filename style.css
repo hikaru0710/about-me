@@ -13,10 +13,11 @@ header {
     position: relative;
 }
 
+/* 通常のナビゲーションメニューを非表示 */
 nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
+    display: none; /* 常に非表示に変更 */
     justify-content: center;
     gap: 20px;
 }
@@ -36,7 +37,7 @@ nav a:hover {
 
 /* ハンバーガーメニューボタン */
 .hamburger {
-    display: none;
+    display: flex; /* 常に表示 */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -73,6 +74,50 @@ nav a:hover {
 
 .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* ナビゲーションメニュー（ハンバーガー） */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: #f8f8f8;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 80px;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    z-index: 999;
+    display: flex; /* 常にflexで表示 */
+    list-style: none;
+}
+
+.nav-menu.active {
+    right: 0;
+}
+
+.nav-menu li {
+    margin: 15px 0;
+    width: 80%;
+}
+
+.nav-menu a {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #eee;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background-color: #ddd;
 }
 
 #slide-image {
@@ -131,10 +176,6 @@ nav a:hover {
 
 #next {
     right: 10px;
-}
-
-.news {
-    border: 1px solid red;/*開発中だけ表示して位置を確認*/
 }
 
 .news {
@@ -204,7 +245,7 @@ nav a:hover {
     background-color: rgba(255,255,255,0.8);
 }
 
-/* タブレット対応 (768px以下) */
+/* レスポンシブ対応 */
 @media screen and (max-width: 768px) {
     header {
         padding: 15px;
@@ -215,48 +256,13 @@ nav a:hover {
         margin-bottom: 0;
     }
     
-    /* ハンバーガーメニュー表示 */
     .hamburger {
-        display: flex;
+        right: 15px;
     }
     
-    /* ナビゲーションメニューを隠す */
     .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 250px;
-        height: 100vh;
-        background-color: #f8f8f8;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 80px;
-        transition: right 0.3s ease;
-        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-        z-index: 999;
-    }
-    
-    .nav-menu.active {
-        right: 0;
-    }
-    
-    .nav-menu li {
-        margin: 15px 0;
-        width: 80%;
-    }
-    
-    nav a {
-        display: block;
-        width: 100%;
-        padding: 15px 20px;
-        text-align: center;
-        border-radius: 5px;
-        background-color: #eee;
-    }
-    
-    nav a:hover {
-        background-color: #ddd;
+        width: 220px;
+        padding-top: 70px;
     }
     
     .slideshow {
@@ -322,7 +328,6 @@ nav a:hover {
     }
 }
 
-/* スマートフォン対応 (480px以下) */
 @media screen and (max-width: 480px) {
     header {
         padding: 10px;
@@ -346,7 +351,7 @@ nav a:hover {
         margin: 12px 0;
     }
     
-    nav a {
+    .nav-menu a {
         padding: 12px 15px;
         font-size: 14px;
     }

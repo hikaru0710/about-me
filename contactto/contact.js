@@ -1,29 +1,29 @@
-document.getElementById('contactForm').addEventListener('submit',function(e){
+document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
-
+    
     clearErrors();
-
+    
     const formData = new FormData(this);
     const name = formData.get('name').trim();
     const email = formData.get('email').trim();
     const message = formData.get('message').trim();
     const privacy = formData.get('privacy');
-
+    
     let hasError = false;
-
+    
     if (!name) {
-        showError('name','お名前を入力してください。')
+        showError('name', 'お名前を入力してください。');
         hasError = true;
     }
-
+    
     if (!email) {
-        showError('email','メールアドレスを入力してください。')
+        showError('email', 'メールアドレスを入力してください。');
         hasError = true;
-    }else if (!validateEmail(email)) {
-        showError('email','正しいメールアドレスを入力してください。');
+    } else if (!validateEmail(email)) {
+        showError('email', '正しいメールアドレスを入力してください。');
         hasError = true;
     }
-
+    
     if (!message) {
         showError('message', 'メッセージを入力してください。');
         hasError = true;
@@ -31,48 +31,51 @@ document.getElementById('contactForm').addEventListener('submit',function(e){
         showError('message', 'メッセージは10文字以上で入力してください。');
         hasError = true;
     }
-
+    
     if (!privacy) {
         showError('privacy', 'プライバシーポリシーに同意してください。');
         hasError = true;
     }
-
-    //送信処理//
+    
+    if (hasError) {
+        return;
+    }
+    
+    // 送信処理
     const submitBtn = document.querySelector('.submit-btn');
-    submitBtn.disabled=true;
-    subnitBtn.textContent='送信中...';
-
-    //模擬的な送信処理//
+    submitBtn.disabled = true;
+    submitBtn.textContent = '送信中...'; // subnitBtn → submitBtn
+    
+    // 模擬的な送信処理
     setTimeout(() => {
-        showSuccessMeeeage();
-        submitBtm.disabled=false;
-        submitBtm.textContent='送信する';
-        document.getElementByIb('contactForm').reset();
-    },2000);
+        showSuccessMessage(); // showSuccessMeeeage → showSuccessMessage
+        submitBtn.disabled = false; // submitBtm → submitBtn
+        submitBtn.textContent = '送信する'; // submitBtm → submitBtn
+        document.getElementById('contactForm').reset(); // getElementByIb → getElementById
+    }, 2000);
 });
 
-function clearErrors(){
+function clearErrors() {
     const errorMessages = document.querySelectorAll('.error');
     const formGroups = document.querySelectorAll('.form-group');
-
-    errorMessages.forEach(error =>{
-        error.style.display='none';
-        error.textContent='';
-    })
-
-    formGroups.forEach(group =>{
+    
+    errorMessages.forEach(error => {
+        error.style.display = 'none';
+        error.textContent = '';
+    });
+    
+    formGroups.forEach(group => {
         group.classList.remove('error');
-    })
-
-    document.getElementById('successMessage').style.display='none'
-
+    });
+    
+    document.getElementById('successMessage').style.display = 'none';
 }
 
-function showError(filbName,message){
-    const errorElement=document.getElementById(fielName+'Error');
-    const formGroup=document.getElementById(fielName).closest('.form-group');
-
- errorElement.textContent = message;
+function showError(fieldName, message) { // filbName → fieldName
+    const errorElement = document.getElementById(fieldName + 'Error'); // fielName → fieldName
+    const formGroup = document.getElementById(fieldName).closest('.form-group'); // fielName → fieldName
+    
+    errorElement.textContent = message;
     errorElement.style.display = 'block';
     formGroup.classList.add('error');
 }
