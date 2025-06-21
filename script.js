@@ -20,8 +20,7 @@ function updateIndicators() {
     });
 }
 function changeImage(nextIndex) {
-    const nextIndex = images[(nextIndex + images.length ) % images.length];
-
+    nextIndex = (nextIndex + images.length) % images.length;
     const nextImage=images[nextIndex];
 
 
