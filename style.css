@@ -1,0 +1,338 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#fff;
+    color: #333;
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    background-color:#eee;
+}
+
+#slide-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.slideshow {
+    position: relative;
+    width: 600px;
+    max-width: 600px;
+    height: 400px;
+    margin: 50px auto;
+    text-align:center;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slideshow button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+.news {
+    border: 1px solid red;/*開発中だけ表示して位置を確認*/
+}
+
+.news {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 50px;
+    max-width: 600px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.news h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color:  #333;
+}
+
+.news ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.news li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #555;
+}
+
+.news li:last-child {
+    border-bottom: none;
+}
+
+.news .date {
+    font-weight: bold;
+    color: #0077cc;
+    margin-right: 10px;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10%;
+    z-index: 3;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+.dot:hover {
+    background-color: rgba(255,255,255,0.8);
+}
+
+/* タブレット対応 (768px以下) */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+    
+    header h1 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav a {
+        padding: 12px 20px;
+        border-radius: 5px;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+    
+    nav a:hover {
+        background-color: #ddd;
+    }
+    
+    .slideshow {
+        width: 95%;
+        height: 300px;
+        margin: 30px auto;
+    }
+    
+    .slideshow button {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+    
+    .indicators {
+        bottom: 15px;
+        gap: 8px;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .hero {
+        padding: 30px 15px;
+        margin: 20px 0;
+    }
+    
+    .hero h2 {
+        font-size: 28px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .news {
+        width: 95%;
+        margin: 30px auto;
+        padding: 15px;
+    }
+    
+    .news h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .news li {
+        padding: 8px 0;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    .news .date {
+        display: block;
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
+    
+    footer {
+        padding: 15px;
+        margin-top: 30px;
+    }
+}
+
+/* スマートフォン対応 (480px以下) */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    nav ul {
+        gap: 8px;
+    }
+    
+    nav a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .slideshow {
+        width: 100%;
+        height: 250px;
+        margin: 20px auto;
+        border-radius: 0;
+    }
+    
+    .slide {
+        border-radius: 0;
+    }
+    
+    .slideshow button {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+    
+    #prev {
+        left: 5px;
+    }
+    
+    #next {
+        right: 5px;
+    }
+    
+    .indicators {
+        bottom: 10px;
+        gap: 6px;
+    }
+    
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .hero {
+        padding: 20px 10px;
+        margin: 15px 0;
+    }
+    
+    .hero h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .hero p {
+        font-size: 14px;
+    }
+    
+    .news {
+        width: 100%;
+        margin: 20px auto;
+        padding: 12px;
+        border-radius: 0;
+    }
+    
+    .news h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .news li {
+        font-size: 13px;
+        padding: 6px 0;
+    }
+    
+    footer {
+        padding: 12px;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+}

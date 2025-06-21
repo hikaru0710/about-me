@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HOME</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+    <header>
+        <h1>HOME(仮)</h1>
+        <nav>
+            <ul>
+                <li><a href="#">news</a></li>
+                <li><a href="#">趣味</a></li>
+                <li><a href="#">趣味2</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="slideshow">
+            <button id="prev">◀︎</button>
+            <img id="slide1" class="slide active" src="images/cat_1.jpeg" alt=""> 
+            <img id="slide2" class="slide" src="" alt="">
+            <button id="next">▶︎</button>
+            <div class="indicators">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </section>
+
+        <section class="hero">
+            <h2>Hello World</h2>
+            <p>Welcome to page</p>
+        </section>
+
+        <section class="news">
+            <h2>📢 NEWS (お知らせ)</h2>
+            <ul>
+                <li><span class="data">2025.05.17</span>ホームページを作り始めました!</li>
+                <li><span class="date">2025.05.31</span>画像読み込めなくて1限使いました</li>
+                <li><span class="date">2025.06.07</span>フェードアニメーションならなくて1限使いました</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 </p>
+    </footer>
+
+    <script src="script.js">
+    </script>
+
+    </body>
+
+</html>
