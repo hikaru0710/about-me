@@ -20,7 +20,9 @@ function updateIndicators() {
     });
 }
 function changeImage(nextIndex) {
-    const nextImage = images[(nextIndex + images.length ) % images.length];
+    const nextIndex = images[(nextIndex + images.length ) % images.length];
+
+    const nextImage=images[nextIndex];
 
 
 if (showingSlide1) {
@@ -33,9 +35,18 @@ if (showingSlide1) {
     slide2.classList.remove('active');
 }
 
-currentIndex = (nextIndex + images.length) % images.length;
+currentIndex = nextIndex;
 showingSlide1 = !showingSlide1;
 updateIndicators();
+}
+
+function initializeSlideshow() {
+
+    slide1.src = images[0];
+    if (images.length > 1) {
+        slide2.src = images[1];
+    }
+    updateIndicators();
 }
 
 dots.forEach((dot, index) => {
@@ -54,5 +65,9 @@ document.getElementById('prev').addEventListener('click', () => {
 
 document.getElementById('next').addEventListener('click', () => {
     changeImage(currentIndex + 1);
+});
+
+document.addEventListener('DOMContentLoaded',() => {
+    initializeSlideshow();
 });
 
