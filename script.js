@@ -1,7 +1,7 @@
 const images = [
     'images/cat_1.jpeg',
     'images/cat_2.jpeg',
-    'images/desigin.jpeg',
+    'images/design.jpeg', // タイポ修正
 ];
 
 let currentIndex = 0;
@@ -11,7 +11,7 @@ const dots = document.querySelectorAll('.dot');
 let showingSlide1 = true;
 
 function updateIndicators() {
-    dots.forEach((dot, index)=> {
+    dots.forEach((dot, index) => {
         if (index === currentIndex) {
             dot.classList.add('active');
         } else {
@@ -19,28 +19,27 @@ function updateIndicators() {
         }
     });
 }
+
 function changeImage(nextIndex) {
     nextIndex = (nextIndex + images.length) % images.length;
-    const nextImage=images[nextIndex];
+    const nextImage = images[nextIndex];
 
+    if (showingSlide1) {
+        slide2.src = nextImage;
+        slide2.classList.add('active');
+        slide1.classList.remove('active');
+    } else {
+        slide1.src = nextImage;
+        slide1.classList.add('active');
+        slide2.classList.remove('active');
+    }
 
-if (showingSlide1) {
-    slide2.src = nextImage;
-    slide2.classList.add('active');
-    slide1.classList.remove('active');
-} else {
-    slide1.src = nextImage;
-    slide1.classList.add('active');
-    slide2.classList.remove('active');
-}
-
-currentIndex = nextIndex;
-showingSlide1 = !showingSlide1;
-updateIndicators();
+    currentIndex = nextIndex;
+    showingSlide1 = !showingSlide1;
+    updateIndicators();
 }
 
 function initializeSlideshow() {
-
     slide1.src = images[0];
     if (images.length > 1) {
         slide2.src = images[1];
@@ -48,6 +47,37 @@ function initializeSlideshow() {
     updateIndicators();
 }
 
+// ハンバーガーメニュー機能
+function initializeHamburgerMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // メニュー項目クリック時にメニューを閉じる
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // 画面サイズ変更時にメニューを閉じる
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    }
+}
+
+// イベントリスナー設定
 dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
         changeImage(index);
@@ -66,7 +96,8 @@ document.getElementById('next').addEventListener('click', () => {
     changeImage(currentIndex + 1);
 });
 
-document.addEventListener('DOMContentLoaded',() => {
+document.addEventListener('DOMContentLoaded', () => {
     initializeSlideshow();
+    initializeHamburgerMenu();
 });
 
