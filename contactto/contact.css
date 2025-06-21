@@ -133,12 +133,15 @@
 /* レスポンシブ対応 */
 @media screen and (max-width: 768px) {
     .contact-form {
-        margin: 30px 15px;
+        margin: 30px auto;
         padding: 20px;
+        width: 90%;
+        max-width: 500px;
     }
     
     .contact-form h2 {
         font-size: 24px;
+        text-align: center;
     }
     
     .form-group input,
@@ -151,17 +154,22 @@
     .submit-btn {
         padding: 12px;
         font-size: 16px;
+        margin: 0 auto;
+        display: block;
     }
 }
 
 @media screen and (max-width: 480px) {
     .contact-form {
-        margin: 20px 10px;
+        margin: 20px auto;
         padding: 15px;
+        width: 95%;
+        max-width: 400px;
     }
     
     .contact-form h2 {
         font-size: 20px;
+        text-align: center;
     }
     
     .checkbox-group {
