@@ -67,12 +67,11 @@ a {
 
 /* ========== カスタムスタイル ========== */
 body {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Helvetica', sans-serif; 
     margin: 0;
     padding: 0;
     background-color:#fff;
     color: #333;
-    line-height: 1.6; /* line-heightを追加 */
+    line-height: 1.6;
 }
 
-/* ...existing code... */
