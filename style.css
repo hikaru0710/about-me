@@ -13,11 +13,10 @@ header {
     position: relative;
 }
 
-/* 通常のナビゲーションメニューを非表示 */
 nav ul {
     list-style: none;
     padding: 0;
-    display: none; /* 常に非表示に変更 */
+    display: none;
     justify-content: center;
     gap: 20px;
 }
@@ -35,9 +34,8 @@ nav a:hover {
     background-color: #ddd;
 }
 
-/* ハンバーガーメニューボタン */
 .hamburger {
-    display: flex; /* 常に表示 */
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -63,7 +61,6 @@ nav a:hover {
     border-radius: 2px;
 }
 
-/* ハンバーガーメニューアニメーション */
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -76,7 +73,6 @@ nav a:hover {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* ナビゲーションメニュー（ハンバーガー） */
 .nav-menu {
     position: fixed;
     top: 0;
@@ -91,7 +87,7 @@ nav a:hover {
     transition: right 0.3s ease;
     box-shadow: -2px 0 5px rgba(0,0,0,0.1);
     z-index: 999;
-    display: flex; /* 常にflexで表示 */
+    display: flex; 
     list-style: none;
 }
 

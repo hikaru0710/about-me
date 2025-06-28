@@ -1,7 +1,7 @@
 const images = [
     'images/cat_1.jpeg',
     'images/cat_2.jpeg',
-    'images/design.jpeg', // タイポ修正
+    'images/design.jpeg', 
 ];
 
 let currentIndex = 0;
@@ -47,7 +47,7 @@ function initializeSlideshow() {
     updateIndicators();
 }
 
-// ハンバーガーメニュー機能
+// ハンバーガーメニュー
 function initializeHamburgerMenu() {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
@@ -58,7 +58,6 @@ function initializeHamburgerMenu() {
             navMenu.classList.toggle('active');
         });
 
-        // メニュー項目クリック時にメニューを閉じる
         const navLinks = navMenu.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -67,7 +66,6 @@ function initializeHamburgerMenu() {
             });
         });
 
-        // 画面サイズ変更時にメニューを閉じる
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 hamburger.classList.remove('active');
@@ -77,7 +75,6 @@ function initializeHamburgerMenu() {
     }
 }
 
-// イベントリスナー設定
 dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
         changeImage(index);
