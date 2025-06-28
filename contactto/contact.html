@@ -20,7 +20,7 @@
                 <span></span>
             </button>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="../index.html">HOME</a></li> <!-- パス修正 -->
+                <li><a href="../index.html">HOME</a></li>
                 <li><a href="#">news</a></li>
                 <li><a href="#">趣味</a></li>
                 <li><a href="#">趣味2</a></li>
@@ -29,8 +29,8 @@
         </nav>
     </header>
 
-    <!-- 成功メッセージを追加 -->
-    <div id="successMessage" class="success-message">
+    <!-- 成功メッセージ -->
+    <div id="successMessage" class="success-message" style="display: none;">
         お問い合わせありがとうございます。メッセージを受信いたしました。
     </div>
 
@@ -52,6 +52,19 @@
                     <div class="error" id="emailError"></div>
                 </div>
 
+                <!-- お問い合わせ種別をメールアドレスの下に移動 -->
+                <div class="form-group">
+                    <label for="category">お問い合わせ種別</label>
+                    <select id="category" name="category">
+                        <option value="">選択してください</option>
+                        <option value="general">一般的な質問</option>
+                        <option value="feedback">フィードバック</option>
+                        <option value="business">ビジネス関連</option>
+                        <option value="technical">技術的な問題</option>
+                        <option value="other">その他</option>
+                    </select>
+                </div>
+
                 <div class="form-group">
                     <label for="subject">件名</label>
                     <input type="text" id="subject" name="subject">
@@ -61,16 +74,6 @@
                     <label for="message">メッセージ<span class="required">*</span></label>
                     <textarea id="message" name="message" rows="6" required placeholder="お問い合わせ内容をご記入ください"></textarea>
                     <div class="error" id="messageError"></div>
-                </div>
-
-                <div class="form-group">
-                    <label for="category">お問い合わせ種別</label>
-                    <select id="category" name="category">
-                        <option value="">選択してください</option>
-                        <option value="general">一般的な質問</option>
-                        <option value="feedback">フィードバック</option>
-                        <option value="other">その他</option>
-                    </select>
                 </div>
 
                 <div class="form-group checkbox-group">

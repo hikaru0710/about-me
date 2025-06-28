@@ -133,15 +133,19 @@
 /* レスポンシブ対応 */
 @media screen and (max-width: 768px) {
     .contact-form {
-        margin: 30px auto;
+        margin: 30px auto; /* 15px → auto で中央揃え */
         padding: 20px;
-        width: 90%;
-        max-width: 500px;
+        width: 90%; /* 幅を指定して中央揃えを確実にする */
+        max-width: 500px; /* 最大幅を制限 */
     }
     
     .contact-form h2 {
         font-size: 24px;
-        text-align: center;
+        text-align: center; /* 中央揃えを確実にする */
+    }
+    
+    .contact-form p {
+        text-align: center; /* 説明文も中央揃え */
     }
     
     .form-group input,
@@ -154,17 +158,17 @@
     .submit-btn {
         padding: 12px;
         font-size: 16px;
-        margin: 0 auto;
-        display: block;
+        margin: 0 auto; /* ボタンも中央揃え */
+        display: block; /* block要素にして中央揃えを有効にする */
     }
 }
 
 @media screen and (max-width: 480px) {
     .contact-form {
-        margin: 20px auto;
+        margin: 20px auto; /* 10px → auto で中央揃え */
         padding: 15px;
-        width: 95%;
-        max-width: 400px;
+        width: 95%; /* 幅を95%に調整 */
+        max-width: 400px; /* 最大幅をより小さく */
     }
     
     .contact-form h2 {
@@ -172,8 +176,59 @@
         text-align: center;
     }
     
+    .contact-form p {
+        text-align: center;
+        font-size: 14px; /* フォントサイズを小さく */
+    }
+    
     .checkbox-group {
         flex-direction: column;
         gap: 5px;
+    }
+    
+    .submit-btn {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+    }
+    
+    /* フォーム全体の配置を確実に中央揃えにする */
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+}
+
+/* 超小画面対応 (320px以下) */
+@media screen and (max-width: 320px) {
+    .contact-form {
+        margin: 15px auto;
+        padding: 12px;
+        width: 98%;
+    }
+    
+    .contact-form h2 {
+        font-size: 18px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    .submit-btn {
+        padding: 10px;
+        font-size: 14px;
     }
 }
