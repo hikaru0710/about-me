@@ -190,48 +190,6 @@ nav a:hover {
     right: 10px;
 }
 
-.news {
-    background-color: #f4f4f4;
-    padding: 20px;
-    margin-top: 50px;
-    max-width: 600px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.news h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-    color: #333;
-    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
-    font-weight: 600;
-}
-
-.news ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.news li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-    font-size: 16px;
-    color: #555;
-    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
-}
-
-.news li:last-child {
-    border-bottom: none;
-}
-
-.news .date {
-    font-weight: bold;
-    color: #0077cc;
-    margin-right: 10px;
-}
 
 .indicators {
     position: absolute;
@@ -314,29 +272,6 @@ nav a:hover {
         font-size: 16px;
     }
     
-    .news {
-        width: 95%;
-        margin: 30px auto;
-        padding: 15px;
-    }
-    
-    .news h2 {
-        font-size: 20px;
-        margin-bottom: 12px;
-    }
-    
-    .news li {
-        padding: 8px 0;
-        font-size: 15px;
-        line-height: 1.6;
-    }
-    
-    .news .date {
-        display: block;
-        margin-bottom: 5px;
-        margin-right: 0;
-    }
-    
     footer {
         padding: 15px;
         margin-top: 30px;
@@ -417,23 +352,6 @@ nav a:hover {
     
     .hero p {
         font-size: 14px;
-    }
-    
-    .news {
-        width: 100%;
-        margin: 20px auto;
-        padding: 12px;
-        border-radius: 0;
-    }
-    
-    .news h2 {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-    
-    .news li {
-        font-size: 13px;
-        padding: 6px 0;
     }
     
     footer {

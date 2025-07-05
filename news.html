@@ -37,7 +37,6 @@
                 <h2>最新のお知らせ</h2>
                 
                 
-                <!-- ニュースリスト -->
                 <div class="news-list">
                     <article class="news-item" data-id="1">
                         <div class="news-link">
@@ -52,16 +51,7 @@
                         </div>
                         <div class="news-detail">
                             <div class="news-detail-content">
-                                <p>この度、ウェブサイトにお問い合わせフォームを追加いたしました。技術的な質問、ビジネス関連のお問い合わせ、その他ご不明な点がございましたら、お気軽にご利用ください。</p>
-                                <p>フォームには以下の項目をご記入いただけます：</p>
-                                <ul>
-                                    <li>お名前（必須）</li>
-                                    <li>メールアドレス（必須）</li>
-                                    <li>お問い合わせ種別</li>
-                                    <li>件名</li>
-                                    <li>メッセージ（必須）</li>
-                                </ul>
-                                <p>送信いただいたお問い合わせには、2営業日以内にご返信いたします。お急ぎの場合は、メールの件名に「急用」とご記載ください。</p>
+                                <p>この度、ウェブサイトにお問い合わせフォームを追加いたしました。技術的な質問、お問い合わせ、その他ご不明な点がございましたら、お気軽にご利用ください。</p>
                             </div>
                         </div>
                     </article>
@@ -79,15 +69,7 @@
                         </div>
                         <div class="news-detail">
                             <div class="news-detail-content">
-                                <p>メインページのスライドショーに、より美しいフェードイン・フェードアウト効果を実装いたしました。画像の切り替えがよりスムーズになり、視覚的な魅力が向上しています。</p>
-                                <p>主な改善点：</p>
-                                <ul>
-                                    <li>スムーズなフェードトランジション</li>
-                                    <li>レスポンシブデザイン対応</li>
-                                    <li>モバイル端末での最適化</li>
-                                    <li>読み込み速度の向上</li>
-                                </ul>
-                                <p>これにより、どの端末からでも快適にスライドショーをお楽しみいただけます。</p>
+                                <p>メインページのスライドショーに、フェードイン・フェードアウト効果を実装しました。。</p>
                             </div>
                         </div>
                     </article>
@@ -105,15 +87,7 @@
                         </div>
                         <div class="news-detail">
                             <div class="news-detail-content">
-                                <p>スライドショーで発生していた画像読み込みの不具合を修正いたしました。これにより、すべての画像が正常に表示されるようになりました。</p>
-                                <p>修正内容：</p>
-                                <ul>
-                                    <li>画像パスの最適化</li>
-                                    <li>プリロード機能の追加</li>
-                                    <li>エラーハンドリングの改善</li>
-                                    <li>代替画像の設定</li>
-                                </ul>
-                                <p>ご不便をおかけして申し訳ございませんでした。今後ともよろしくお願いいたします。</p>
+                                <p>スライドショーで発生していた画像読み込みの不具合を修正しました。これにより、すべての画像が正常に表示されるようになりました。</p>
                             </div>
                         </div>
                     </article>
@@ -131,16 +105,7 @@
                         </div>
                         <div class="news-detail">
                             <div class="news-detail-content">
-                                <p>この度、新しいウェブサイトの制作を開始いたしました。モダンなデザインと使いやすいインターフェースを心がけて開発を進めております。</p>
-                                <p>開発予定の機能：</p>
-                                <ul>
-                                    <li>レスポンシブデザイン</li>
-                                    <li>スライドショー機能</li>
-                                    <li>お問い合わせフォーム</li>
-                                    <li>ニュース更新機能</li>
-                                    <li>ハンバーガーメニュー</li>
-                                </ul>
-                                <p>今後も機能の追加や改善を行ってまいりますので、どうぞよろしくお願いいたします。</p>
+                                <p>この度、新しいウェブサイトの制作を開始いたしました。</p>
                             </div>
                         </div>
                     </article>
@@ -158,16 +123,7 @@
                         </div>
                         <div class="news-detail">
                             <div class="news-detail-content">
-                                <p>新しいウェブサイトの企画・構想段階を開始いたしました。ユーザーにとって使いやすく、情報を分かりやすく伝えられるサイトを目指します。</p>
-                                <p>構想段階での検討事項：</p>
-                                <ul>
-                                    <li>サイト全体の構成</li>
-                                    <li>デザインコンセプト</li>
-                                    <li>必要な機能の洗い出し</li>
-                                    <li>技術選定</li>
-                                    <li>スケジュール策定</li>
-                                </ul>
-                                <p>皆様のご意見やご要望もお聞かせください。より良いサイト作りに活かしてまいります。</p>
+                                <p>新しいウェブサイトの構想を開始いたしました。</p>
                             </div>
                         </div>
                     </article>
@@ -208,19 +164,17 @@
                 });
             }
 
-            // フィルターボタンの機能
+
             const filterButtons = document.querySelectorAll('.filter-button');
             filterButtons.forEach(button => {
                 button.addEventListener('click', (e) => {
                     e.preventDefault();
-                    
-                    // アクティブ状態の切り替え
+
                     filterButtons.forEach(btn => btn.classList.remove('active'));
                     button.classList.add('active');
                 });
             });
 
-            // ニュース記事の詳細表示機能
             const newsItems = document.querySelectorAll('.news-item');
             newsItems.forEach(item => {
                 const newsLink = item.querySelector('.news-link');
@@ -231,8 +185,7 @@
                     e.preventDefault();
                     
                     const isExpanded = item.classList.contains('expanded');
-                    
-                    // 他の記事を閉じる
+
                     newsItems.forEach(otherItem => {
                         if (otherItem !== item) {
                             otherItem.classList.remove('expanded');
@@ -241,7 +194,6 @@
                         }
                     });
                     
-                    // クリックした記事の展開/折りたたみ
                     if (isExpanded) {
                         item.classList.remove('expanded');
                         arrow.innerHTML = '›';
@@ -249,7 +201,6 @@
                         item.classList.add('expanded');
                         arrow.innerHTML = '‹';
                         
-                        // スムーズにスクロール
                         setTimeout(() => {
                             newsDetail.scrollIntoView({ 
                                 behavior: 'smooth',
