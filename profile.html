@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PROFILE - 自己紹介</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="profile.css">
+    </head>
+    <body>
+
+    <header>
+        <h1>👤 PROFILE</h1>
+        <nav>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="news.html">news</a></li>
+                <li><a href="cycle.html">サイクリング</a></li>
+                <li><a href="profile.html">自己紹介</a></li>
+                <li><a href="contactto/contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="profile-page">
+            <div class="profile-container">
+                <!-- ページヘッダー -->
+                <div class="page-header">
+                    <h2>自己紹介</h2>
+                    <p class="page-subtitle">Hello! 私についてご紹介します</p>
+                </div>
+
+                <!-- プロフィール情報 -->
+                <div class="profile-content">
+                    <!-- 基本情報セクション -->
+                    <section class="profile-section">
+                        <div class="profile-main">
+                            <div class="profile-image">
+                                <img src="images/profile.jpg" alt="プロフィール画像" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjZjVmNWY1Ii8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjgwIiByPSIzMCIgZmlsbD0iI2NjYyIvPgo8cGF0aCBkPSJNNjAgMTYwYzAtMjIuMDkgMTcuOTEtNDAgNDAtNDBzNDAgMTcuOTEgNDAgNDBINjB6IiBmaWxsPSIjY2NjIi8+Cjwvc3ZnPgo='">
+                            </div>
+                            <div class="profile-info">
+                                <h3 class="profile-name">田中 太郎</h3>
+                                <p class="profile-title">Web Developer & Cycling Enthusiast</p>
+                                <div class="profile-basic">
+                                    <div class="info-item">
+                                        <span class="info-label">年齢:</span>
+                                        <span class="info-value">25歳</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">出身:</span>
+                                        <span class="info-value">東京都</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">職業:</span>
+                                        <span class="info-value">Webエンジニア</span>
+                                    </div>
+                                    <div class="info-item">
+                                        <span class="info-label">趣味:</span>
+                                        <span class="info-value">サイクリング、プログラミング</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 自己紹介文セクション -->
+                    <section class="profile-section">
+                        <h4 class="section-title">はじめまして</h4>
+                        <div class="section-content">
+                            <p>こんにちは！このウェブサイトをご覧いただき、ありがとうございます。</p>
+                            <p>私は都内でWebエンジニアとして働いている25歳です。大学時代にプログラミングと出会い、その面白さに魅了されてこの道を選びました。現在は主にフロントエンド開発を担当しており、HTML、CSS、JavaScriptを使ったWebサイト制作に携わっています。</p>
+                            <p>仕事以外では、サイクリングが大きな趣味の一つです。週末になると愛車のロードバイクで都内近郊を走り回っています。特に多摩川サイクリングロードがお気に入りで、川沿いの風を感じながらペダルを漕ぐ時間は最高のリフレッシュタイムです。</p>
+                        </div>
+                    </section>
+
+                    <!-- スキルセクション -->
+                    <section class="profile-section">
+                        <h4 class="section-title">スキル・技術</h4>
+                        <div class="section-content">
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">HTML/CSS</span>
+                                        <span class="skill-level">上級</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">JavaScript</span>
+                                        <span class="skill-level">中級</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 70%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">React</span>
+                                        <span class="skill-level">中級</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">Node.js</span>
+                                        <span class="skill-level">初級</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" style="width: 45%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 趣味・興味セクション -->
+                    <section class="profile-section">
+                        <h4 class="section-title">趣味・興味</h4>
+                        <div class="section-content">
+                            <div class="interests-grid">
+                                <div class="interest-item">
+                                    <div class="interest-icon">🚴‍♂️</div>
+                                    <h5>サイクリング</h5>
+                                    <p>週末は愛車のロードバイクで都内近郊をツーリング。多摩川サイクリングロードがお気に入りのコースです。</p>
+                                </div>
+                                <div class="interest-item">
+                                    <div class="interest-icon">💻</div>
+                                    <h5>プログラミング</h5>
+                                    <p>新しい技術の学習が好きで、最近はReactやTypeScriptに興味を持って勉強しています。</p>
+                                </div>
+                                <div class="interest-item">
+                                    <div class="interest-icon">📚</div>
+                                    <h5>読書</h5>
+                                    <p>技術書から小説まで幅広く読みます。特にSF小説と技術関連の書籍がお気に入りです。</p>
+                                </div>
+                                <div class="interest-item">
+                                    <div class="interest-icon">🎵</div>
+                                    <h5>音楽鑑賞</h5>
+                                    <p>ジャンルを問わず音楽を聴くのが好きです。コーディング中はLo-Fiやジャズをよく聴いています。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 目標・今後の展望セクション -->
+                    <section class="profile-section">
+                        <h4 class="section-title">目標・今後の展望</h4>
+                        <div class="section-content">
+                            <div class="goals-list">
+                                <div class="goal-item">
+                                    <div class="goal-icon">🎯</div>
+                                    <div class="goal-content">
+                                        <h5>技術スキルの向上</h5>
+                                        <p>フルスタックエンジニアを目指して、バックエンド技術の習得に力を入れています。特にNode.jsとデータベース設計について深く学びたいと思っています。</p>
+                                    </div>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="goal-icon">🌟</div>
+                                    <div class="goal-content">
+                                        <h5>個人プロジェクトの充実</h5>
+                                        <p>学んだ技術を活かして、より実用的なWebアプリケーションを開発したいと考えています。ユーザーに価値を提供できるサービスを作ることが目標です。</p>
+                                    </div>
+                                </div>
+                                <div class="goal-item">
+                                    <div class="goal-icon">🚴‍♂️</div>
+                                    <div class="goal-content">
+                                        <h5>サイクリングの記録</h5>
+                                        <p>今年中に総走行距離1,000kmを目指しています。また、新しいサイクリングコースの開拓も楽しみの一つです。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025</p>
+    </footer>
+
+    <script src="profile.js"></script>
+
+    </body>
+</html>

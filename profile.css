@@ -1,0 +1,379 @@
+/* PROFILE（自己紹介）ページ専用スタイル */
+
+.profile-page {
+    min-height: 80vh;
+    background-color: #ffffff;
+}
+
+.profile-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* ページヘッダー */
+.page-header {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 0;
+}
+
+.page-header h2 {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-subtitle {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 18px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+/* プロフィールコンテンツ */
+.profile-content {
+    background-color: #fff;
+    padding: 0;
+}
+
+.profile-section {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 40px 30px;
+}
+
+.profile-section:last-child {
+    border-bottom: none;
+}
+
+/* プロフィールメイン情報 */
+.profile-main {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #6c5ce7;
+    box-shadow: 0 8px 20px rgba(108, 92, 231, 0.2);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-name {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.profile-title {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 16px;
+    color: #6c5ce7;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.profile-basic {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-label {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-weight: 600;
+    color: #555;
+    min-width: 60px;
+}
+
+.info-value {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    color: #333;
+}
+
+/* セクションタイトル */
+.section-title {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+    border-radius: 2px;
+}
+
+/* セクションコンテンツ */
+.section-content {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    line-height: 1.7;
+    color: #555;
+}
+
+.section-content p {
+    margin-bottom: 15px;
+}
+
+/* スキルセクション */
+.skills-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.skill-item {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #6c5ce7;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skill-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.skill-level {
+    font-size: 12px;
+    color: #6c5ce7;
+    font-weight: 500;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+    border-radius: 3px;
+    transition: width 1.5s ease;
+}
+
+/* 興味・趣味グリッド */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.interest-item {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interest-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(108, 92, 231, 0.15);
+}
+
+.interest-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.interest-item h5 {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.interest-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 目標セクション */
+.goals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.goal-item {
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.goal-item:hover {
+    transform: translateX(5px);
+}
+
+.goal-icon {
+    font-size: 36px;
+    flex-shrink: 0;
+}
+
+.goal-content h5 {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.goal-content p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* アニメーション */
+.profile-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.profile-section:nth-child(1) { animation-delay: 0.1s; }
+.profile-section:nth-child(2) { animation-delay: 0.2s; }
+.profile-section:nth-child(3) { animation-delay: 0.3s; }
+.profile-section:nth-child(4) { animation-delay: 0.4s; }
+.profile-section:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+    .page-header {
+        padding: 40px 15px;
+    }
+    
+    .page-header h2 {
+        font-size: 32px;
+    }
+    
+    .page-subtitle {
+        font-size: 16px;
+    }
+    
+    .profile-section {
+        padding: 30px 20px;
+    }
+    
+    .profile-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .profile-name {
+        font-size: 24px;
+    }
+    
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .goal-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page-header {
+        padding: 30px 10px;
+    }
+    
+    .page-header h2 {
+        font-size: 26px;
+    }
+    
+    .page-subtitle {
+        font-size: 14px;
+    }
+    
+    .profile-section {
+        padding: 25px 15px;
+    }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .profile-name {
+        font-size: 20px;
+    }
+    
+    .section-title {
+        font-size: 20px;
+    }
+    
+    .interest-item, .goal-item {
+        padding: 20px;
+    }
+}
