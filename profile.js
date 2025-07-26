@@ -27,27 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // スキルバーのアニメーション
-    const observerOptions = {
-        threshold: 0.3,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const skillObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const skillBars = entry.target.querySelectorAll('.skill-progress');
-                skillBars.forEach(bar => {
-                    const width = bar.style.width;
-                    bar.style.width = '0%';
-                    setTimeout(() => {
-                        bar.style.width = width;
-                    }, 200);
-                });
-            }
-        });
-    }, observerOptions);
-
     // スキルセクションを監視
     const skillsSection = document.querySelector('.skills-grid');
     if (skillsSection) {

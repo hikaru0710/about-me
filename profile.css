@@ -118,24 +118,6 @@
     font-size: 14px;
 }
 
-.detail-value {
-    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
-    color: #333;
-    font-size: 16px;
-    flex: 1;
-}
-
-/* メッセージテキスト */
-.message-text {
-    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
-    line-height: 1.8;
-    color: #555;
-}
-
-.message-text p {
-    margin-bottom: 20px;
-    font-size: 16px;
-}
 
 /* スキルタグ */
 .skills-simple {
