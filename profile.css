@@ -1,4 +1,4 @@
-/* PROFILE（自己紹介）ページ専用スタイル */
+/* PROFILE（自己紹介）ページ専用スタイル - 櫻坂46風 */
 
 .profile-page {
     min-height: 80vh;
@@ -6,224 +6,178 @@
 }
 
 .profile-container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0;
 }
 
-/* ページヘッダー */
-.page-header {
-    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-    margin-bottom: 0;
-}
-
-.page-header h2 {
-    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-}
-
-.page-subtitle {
-    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
-    font-size: 18px;
-    opacity: 0.9;
-    line-height: 1.6;
-}
-
-/* プロフィールコンテンツ */
-.profile-content {
-    background-color: #fff;
-    padding: 0;
-}
-
-.profile-section {
-    border-bottom: 1px solid #f0f0f0;
-    padding: 40px 30px;
-}
-
-.profile-section:last-child {
-    border-bottom: none;
-}
-
-/* プロフィールメイン情報 */
-.profile-main {
+/* プロフィールヒーロー */
+.profile-hero {
     display: flex;
-    gap: 30px;
+    gap: 60px;
+    padding: 60px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
     align-items: flex-start;
-    margin-bottom: 20px;
 }
 
-.profile-image {
+.profile-image-large {
     flex-shrink: 0;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 300px;
+    height: 400px;
     overflow: hidden;
-    border: 4px solid #6c5ce7;
-    box-shadow: 0 8px 20px rgba(108, 92, 231, 0.2);
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-.profile-image img {
+.profile-image-large img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.profile-info {
+.profile-info-main {
+    flex: 1;
+    padding-top: 40px;
+}
+
+.profile-name-large {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.profile-name-en {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.profile-title-main {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 20px;
+    color: #666;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* プロフィール詳細 */
+.profile-details {
+    background-color: #ffffff;
+}
+
+.detail-section {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 50px 40px;
+}
+
+.detail-section:last-child {
+    border-bottom: none;
+}
+
+.detail-title {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.detail-content {
+    max-width: 800px;
+}
+
+/* プロフィール詳細グリッド */
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px 60px;
+}
+
+.detail-item {
+    display: flex;
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 15px;
+}
+
+.detail-label {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-weight: 600;
+    color: #888;
+    min-width: 80px;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.detail-value {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    color: #333;
+    font-size: 16px;
     flex: 1;
 }
 
-.profile-name {
+/* メッセージテキスト */
+.message-text {
     font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 8px;
+    line-height: 1.8;
+    color: #555;
 }
 
-.profile-title {
-    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+.message-text p {
+    margin-bottom: 20px;
     font-size: 16px;
-    color: #6c5ce7;
-    margin-bottom: 20px;
-    font-weight: 500;
 }
 
-.profile-basic {
+/* スキルタグ */
+.skills-simple {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-.info-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.info-label {
-    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
-    font-weight: 600;
-    color: #555;
-    min-width: 60px;
-}
-
-.info-value {
-    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
-    color: #333;
-}
-
-/* セクションタイトル */
-.section-title {
-    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, #6c5ce7, #a29bfe);
-    border-radius: 2px;
-}
-
-/* セクションコンテンツ */
-.section-content {
-    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
-    line-height: 1.7;
-    color: #555;
-}
-
-.section-content p {
-    margin-bottom: 15px;
-}
-
-/* スキルセクション */
-.skills-grid {
-    display: grid;
-    gap: 20px;
-}
-
-.skill-item {
+.skill-tag {
     background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 4px solid #6c5ce7;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
 }
 
-.skill-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+.skill-tag:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
 }
 
-.skill-name {
-    font-weight: 600;
-    color: #333;
-}
-
-.skill-level {
-    font-size: 12px;
-    color: #6c5ce7;
-    font-weight: 500;
-}
-
-.skill-bar {
-    width: 100%;
-    height: 6px;
-    background-color: #e0e0e0;
-    border-radius: 3px;
-    overflow: hidden;
-}
-
-.skill-progress {
-    height: 100%;
-    background: linear-gradient(90deg, #6c5ce7, #a29bfe);
-    border-radius: 3px;
-    transition: width 1.5s ease;
-}
-
-/* 興味・趣味グリッド */
-.interests-grid {
+/* 趣味グリッド */
+.hobby-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
 }
 
-.interest-item {
-    background-color: #f8f9fa;
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.hobby-item {
+    text-align: left;
 }
 
-.interest-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(108, 92, 231, 0.15);
-}
-
-.interest-icon {
-    font-size: 48px;
+.hobby-icon {
+    font-size: 36px;
     margin-bottom: 15px;
     display: block;
 }
 
-.interest-item h5 {
+.hobby-item h4 {
     font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
     font-size: 18px;
     font-weight: 600;
@@ -231,65 +185,25 @@
     margin-bottom: 10px;
 }
 
-.interest-item p {
+.hobby-item p {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
     font-size: 14px;
     color: #666;
     line-height: 1.6;
     margin: 0;
 }
 
-/* 目標セクション */
-.goals-list {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.goal-item {
-    display: flex;
-    gap: 20px;
-    padding: 25px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.goal-item:hover {
-    transform: translateX(5px);
-}
-
-.goal-icon {
-    font-size: 36px;
-    flex-shrink: 0;
-}
-
-.goal-content h5 {
-    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 8px;
-}
-
-.goal-content p {
-    font-size: 15px;
-    color: #666;
-    line-height: 1.6;
-    margin: 0;
-}
-
 /* アニメーション */
-.profile-section {
+.detail-section {
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.6s ease forwards;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
 }
 
-.profile-section:nth-child(1) { animation-delay: 0.1s; }
-.profile-section:nth-child(2) { animation-delay: 0.2s; }
-.profile-section:nth-child(3) { animation-delay: 0.3s; }
-.profile-section:nth-child(4) { animation-delay: 0.4s; }
-.profile-section:nth-child(5) { animation-delay: 0.5s; }
+.detail-section:nth-child(1) { animation-delay: 0.1s; }
+.detail-section:nth-child(2) { animation-delay: 0.2s; }
+.detail-section:nth-child(3) { animation-delay: 0.3s; }
+.detail-section:nth-child(4) { animation-delay: 0.4s; }
 
 @keyframes fadeInUp {
     to {
@@ -298,82 +212,175 @@
     }
 }
 
+/* プロフィールヒーローのアニメーション */
+.profile-hero {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
 /* レスポンシブ対応 */
-@media screen and (max-width: 768px) {
-    .page-header {
-        padding: 40px 15px;
-    }
-    
-    .page-header h2 {
-        font-size: 32px;
-    }
-    
-    .page-subtitle {
-        font-size: 16px;
-    }
-    
-    .profile-section {
-        padding: 30px 20px;
-    }
-    
-    .profile-main {
+@media screen and (max-width: 968px) {
+    .profile-hero {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 40px;
+        padding: 40px 30px;
+    }
+    
+    .profile-image-large {
+        width: 250px;
+        height: 330px;
+    }
+    
+    .profile-info-main {
+        padding-top: 0;
+    }
+    
+    .profile-name-large {
+        font-size: 36px;
+    }
+    
+    .detail-section {
+        padding: 40px 30px;
+    }
+    
+    .detail-grid {
+        grid-template-columns: 1fr;
         gap: 20px;
     }
-    
-    .profile-image {
-        width: 120px;
-        height: 120px;
+}
+
+@media screen and (max-width: 768px) {
+    .profile-hero {
+        padding: 30px 20px;
+        gap: 30px;
     }
     
-    .profile-name {
-        font-size: 24px;
+    .profile-image-large {
+        width: 200px;
+        height: 260px;
     }
     
-    .interests-grid {
+    .profile-name-large {
+        font-size: 28px;
+    }
+    
+    .profile-name-en {
+        font-size: 16px;
+    }
+    
+    .profile-title-main {
+        font-size: 16px;
+    }
+    
+    .detail-section {
+        padding: 30px 20px;
+    }
+    
+    .detail-title {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .hobby-grid {
         grid-template-columns: 1fr;
+        gap: 25px;
     }
     
-    .goal-item {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
+    .skills-simple {
+        gap: 10px;
+    }
+    
+    .skill-tag {
+        padding: 8px 16px;
+        font-size: 13px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .page-header {
-        padding: 30px 10px;
+    .profile-hero {
+        padding: 20px 15px;
+        gap: 25px;
     }
     
-    .page-header h2 {
-        font-size: 26px;
+    .profile-image-large {
+        width: 160px;
+        height: 200px;
     }
     
-    .page-subtitle {
+    .profile-name-large {
+        font-size: 24px;
+    }
+    
+    .profile-name-en {
         font-size: 14px;
     }
     
-    .profile-section {
+    .profile-title-main {
+        font-size: 14px;
+    }
+    
+    .detail-section {
         padding: 25px 15px;
     }
     
-    .profile-image {
-        width: 100px;
-        height: 100px;
+    .detail-title {
+        font-size: 18px;
+        margin-bottom: 20px;
     }
     
-    .profile-name {
-        font-size: 20px;
+    .detail-grid {
+        gap: 15px;
     }
     
-    .section-title {
-        font-size: 20px;
+    .detail-label {
+        min-width: 70px;
+        font-size: 13px;
     }
     
-    .interest-item, .goal-item {
-        padding: 20px;
+    .detail-value {
+        font-size: 14px;
     }
+    
+    .message-text p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+    
+    .hobby-item h4 {
+        font-size: 16px;
+    }
+    
+    .hobby-item p {
+        font-size: 13px;
+    }
+}
+
+/* ホバーエフェクト */
+.hobby-item {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.hobby-item:hover {
+    transform: translateY(-3px);
+}
+
+.detail-item {
+    transition: background-color 0.3s ease;
+    padding: 15px 0;
+    border-radius: 4px;
+}
+
+.detail-item:hover {
+    background-color: #fafafa;
+    padding-left: 10px;
+    padding-right: 10px;
 }
