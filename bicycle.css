@@ -1,0 +1,527 @@
+/* 自転車ベル紹介ページ専用スタイル - 櫻坂46ブログ風 */
+
+.bicycle-page {
+    min-height: 80vh;
+    background-color: #ffffff;
+}
+
+.bicycle-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #fff;
+}
+
+/* 記事ヘッダー */
+.article-header {
+    padding: 60px 40px 40px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.article-date {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.article-title {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.article-subtitle {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* メイン画像 */
+.main-image {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.main-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+    padding: 30px 40px 20px;
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 14px;
+}
+
+/* 記事コンテンツ */
+.article-content {
+    padding: 0 40px 60px;
+}
+
+.content-section {
+    margin: 50px 0;
+}
+
+.content-section h3 {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.content-section p {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* ベルショーケース */
+.bell-showcase {
+    margin: 60px 0;
+    padding: 40px;
+    background-color: #fafafa;
+    border-radius: 10px;
+}
+
+.bell-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.bell-image {
+    text-align: center;
+}
+
+.bell-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.bell-image img:hover {
+    transform: scale(1.05);
+}
+
+.image-label {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* 理由リスト */
+.reason-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.reason-item {
+    display: flex;
+    gap: 25px;
+    padding: 25px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.reason-item:hover {
+    transform: translateX(5px);
+}
+
+.reason-number {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.reason-content h4 {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.reason-content p {
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* スペック表 */
+.specs-section {
+    margin: 50px 0;
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.specs-table {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.spec-row {
+    display: flex;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.spec-row:last-child {
+    border-bottom: none;
+}
+
+.spec-label {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-weight: 600;
+    color: #555;
+    min-width: 180px;
+    font-size: 15px;
+}
+
+.spec-value {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    color: #333;
+    font-size: 15px;
+    flex: 1;
+}
+
+/* 評価セクション */
+.rating-section {
+    margin: 50px 0;
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.rating-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.rating-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.rating-label {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 14px;
+    color: #555;
+    min-width: 80px;
+    font-weight: 500;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    color: #ddd;
+    font-size: 16px;
+}
+
+.star.filled {
+    color: #ffd700;
+}
+
+.rating-score {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+.overall-rating {
+    text-align: center;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.overall-label {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 16px;
+    color: #555;
+    margin-right: 15px;
+}
+
+.overall-score {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.overall-text {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    color: #888;
+}
+
+/* 関連記事 */
+.related-section {
+    margin-top: 80px;
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.related-section h3 {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.related-articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.related-article {
+    display: block;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.related-article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.related-image {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+}
+
+.related-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.related-content {
+    padding: 20px;
+}
+
+.related-date {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.related-content h4 {
+    font-family: 'Zen Old Mincho', 'Helvetica', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* アニメーション */
+.content-section, .bell-showcase, .specs-section, .rating-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.content-section:nth-child(1) { animation-delay: 0.1s; }
+.content-section:nth-child(2) { animation-delay: 0.2s; }
+.bell-showcase { animation-delay: 0.3s; }
+.content-section:nth-child(4) { animation-delay: 0.4s; }
+.specs-section { animation-delay: 0.5s; }
+.content-section:nth-child(6) { animation-delay: 0.6s; }
+.rating-section { animation-delay: 0.7s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+    .bicycle-container {
+        margin: 0;
+    }
+    
+    .article-header {
+        padding: 40px 20px 30px;
+    }
+    
+    .article-title {
+        font-size: 26px;
+    }
+    
+    .article-subtitle {
+        font-size: 14px;
+    }
+    
+    .article-content {
+        padding: 0 20px 40px;
+    }
+    
+    .image-caption {
+        padding: 20px;
+    }
+    
+    .bell-showcase {
+        padding: 30px 20px;
+        margin: 40px 0;
+    }
+    
+    .bell-images {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .reason-item {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .reason-number {
+        align-self: flex-start;
+    }
+    
+    .specs-section, .rating-section {
+        padding: 30px 20px;
+    }
+    
+    .rating-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .related-section {
+        padding: 30px 20px;
+        margin-top: 60px;
+    }
+    
+    .related-articles {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .article-header {
+        padding: 30px 15px 25px;
+    }
+    
+    .article-title {
+        font-size: 22px;
+    }
+    
+    .article-content {
+        padding: 0 15px 30px;
+    }
+    
+    .main-image img {
+        height: 250px;
+    }
+    
+    .content-section h3 {
+        font-size: 20px;
+    }
+    
+    .content-section p {
+        font-size: 14px;
+    }
+    
+    .bell-showcase {
+        padding: 20px 15px;
+    }
+    
+    .reason-item {
+        padding: 15px;
+    }
+    
+    .reason-content h4 {
+        font-size: 16px;
+    }
+    
+    .reason-content p {
+        font-size: 14px;
+    }
+    
+    .specs-section, .rating-section, .related-section {
+        padding: 25px 15px;
+    }
+    
+    .spec-label {
+        min-width: 120px;
+        font-size: 13px;
+    }
+    
+    .spec-value {
+        font-size: 13px;
+    }
+    
+    .overall-score {
+        font-size: 36px;
+    }
+}
