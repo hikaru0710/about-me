@@ -1,7 +1,6 @@
-// PROFILE（自己紹介）ページのJavaScript
 
 document.addEventListener('DOMContentLoaded', () => {
-    // ハンバーガーメニュー機能
+
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
     
@@ -27,13 +26,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // スキルセクションを監視
+
     const skillsSection = document.querySelector('.skills-grid');
     if (skillsSection) {
         skillObserver.observe(skillsSection.closest('.profile-section'));
     }
 
-    // セクションのスクロールアニメーション
+
     const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -43,13 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // 全セクションを監視
+
     const sections = document.querySelectorAll('.profile-section');
     sections.forEach(section => {
         sectionObserver.observe(section);
     });
 
-    // 趣味カードのホバーエフェクト強化
+
     const interestItems = document.querySelectorAll('.interest-item');
     interestItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
@@ -61,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 目標アイテムのクリックで詳細表示（オプション）
+
     const goalItems = document.querySelectorAll('.goal-item');
     goalItems.forEach(item => {
         item.addEventListener('click', () => {

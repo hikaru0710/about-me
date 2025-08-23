@@ -14,7 +14,7 @@
     <body>
 
     <header>
-        <h1>📢 NEWS (お知らせ)</h1>
+        <h1>📢 NEWS</h1>
         <nav>
             <button class="hamburger" id="hamburger">
                 <span></span>
@@ -36,10 +36,36 @@
             <div class="news-container">
                 <h2>最新のお知らせ</h2>
                 
+
+                <div class="news-filter" style="display: none;">
+                    <button class="filter-button active" data-filter="all">すべて</button>
+                    <button class="filter-button" data-filter="new">新着</button>
+                    <button class="filter-button" data-filter="update">更新</button>
+                    <button class="filter-button" data-filter="fix">修正</button>
+                    <button class="filter-button" data-filter="info">お知らせ</button>
+                </div>
                 
                 <div class="news-list">
-                    <article class="news-item" data-id="1">
-                        <div class="news-link">
+                    <article class="news-item" data-id="1" data-category="new">
+                        <div class="news-link" tabindex="0" role="button" aria-expanded="false">
+                            <div class="news-date-section">
+                                <span class="news-date">2025.07.26</span>
+                            </div>
+                            <div class="news-content-section">
+                                <span class="news-category new">NEW</span>
+                                <h3 class="news-title">自転車ベル紹介ページを追加しました</h3>
+                            </div>
+                            <span class="news-arrow">›</span>
+                        </div>
+                        <div class="news-detail">
+                            <div class="news-detail-content">
+                                <p>この度、サイクリング関連のコンテンツとして、愛用している自転車ベルの詳細レビューページを追加いたしました。製品の特徴、使用感、評価などを詳しく紹介しています。</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="news-item" data-id="2" data-category="new">
+                        <div class="news-link" tabindex="0" role="button" aria-expanded="false">
                             <div class="news-date-section">
                                 <span class="news-date">2025.06.21</span>
                             </div>
@@ -56,8 +82,8 @@
                         </div>
                     </article>
 
-                    <article class="news-item" data-id="2">
-                        <div class="news-link">
+                    <article class="news-item" data-id="3" data-category="update">
+                        <div class="news-link" tabindex="0" role="button" aria-expanded="false">
                             <div class="news-date-section">
                                 <span class="news-date">2025.06.07</span>
                             </div>
@@ -69,13 +95,13 @@
                         </div>
                         <div class="news-detail">
                             <div class="news-detail-content">
-                                <p>メインページのスライドショーに、フェードイン・フェードアウト効果を実装しました。</p>
+                                <p>メインページのスライドショーに、フェードイン・フェードアウト効果を実装しました。より滑らかで美しいアニメーションをお楽しみください。</p>
                             </div>
                         </div>
                     </article>
 
-                    <article class="news-item" data-id="3">
-                        <div class="news-link">
+                    <article class="news-item" data-id="4" data-category="fix">
+                        <div class="news-link" tabindex="0" role="button" aria-expanded="false">
                             <div class="news-date-section">
                                 <span class="news-date">2025.05.31</span>
                             </div>
@@ -92,8 +118,8 @@
                         </div>
                     </article>
 
-                    <article class="news-item" data-id="4">
-                        <div class="news-link">
+                    <article class="news-item" data-id="5" data-category="info">
+                        <div class="news-link" tabindex="0" role="button" aria-expanded="false">
                             <div class="news-date-section">
                                 <span class="news-date">2025.05.17</span>
                             </div>
@@ -105,13 +131,13 @@
                         </div>
                         <div class="news-detail">
                             <div class="news-detail-content">
-                                <p>この度、新しいウェブサイトの制作を開始いたしました。</p>
+                                <p>この度、新しいウェブサイトの制作を開始いたしました。プロフィール、ニュース、お問い合わせなどのページを順次公開予定です。</p>
                             </div>
                         </div>
                     </article>
 
-                    <article class="news-item" data-id="5">
-                        <div class="news-link">
+                    <article class="news-item" data-id="6" data-category="info">
+                        <div class="news-link" tabindex="0" role="button" aria-expanded="false">
                             <div class="news-date-section">
                                 <span class="news-date">2025.05.10</span>
                             </div>
@@ -123,7 +149,7 @@
                         </div>
                         <div class="news-detail">
                             <div class="news-detail-content">
-                                <p>新しいウェブサイトの構想を開始いたしました。</p>
+                                <p>新しいウェブサイトの構想を開始いたしました。ユーザーフレンドリーで機能的なサイトを目指して設計を進めています。</p>
                             </div>
                         </div>
                     </article>
@@ -136,82 +162,7 @@
         <p>&copy; 2025</p>
     </footer>
 
-    <script>
-        // ハンバーガーメニュー機能
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburger = document.getElementById('hamburger');
-            const navMenu = document.getElementById('nav-menu');
-            
-            if (hamburger && navMenu) {
-                hamburger.addEventListener('click', () => {
-                    hamburger.classList.toggle('active');
-                    navMenu.classList.toggle('active');
-                });
-
-                const navLinks = navMenu.querySelectorAll('a');
-                navLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        hamburger.classList.remove('active');
-                        navMenu.classList.remove('active');
-                    });
-                });
-
-                window.addEventListener('resize', () => {
-                    if (window.innerWidth > 768) {
-                        hamburger.classList.remove('active');
-                        navMenu.classList.remove('active');
-                    }
-                });
-            }
-
-
-            const filterButtons = document.querySelectorAll('.filter-button');
-            filterButtons.forEach(button => {
-                button.addEventListener('click', (e) => {
-                    e.preventDefault();
-
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                });
-            });
-
-            const newsItems = document.querySelectorAll('.news-item');
-            newsItems.forEach(item => {
-                const newsLink = item.querySelector('.news-link');
-                const newsDetail = item.querySelector('.news-detail');
-                const arrow = item.querySelector('.news-arrow');
-                
-                newsLink.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    
-                    const isExpanded = item.classList.contains('expanded');
-
-                    newsItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove('expanded');
-                            const otherArrow = otherItem.querySelector('.news-arrow');
-                            if (otherArrow) otherArrow.innerHTML = '›';
-                        }
-                    });
-                    
-                    if (isExpanded) {
-                        item.classList.remove('expanded');
-                        arrow.innerHTML = '›';
-                    } else {
-                        item.classList.add('expanded');
-                        arrow.innerHTML = '‹';
-                        
-                        setTimeout(() => {
-                            newsDetail.scrollIntoView({ 
-                                behavior: 'smooth',
-                                block: 'nearest'
-                            });
-                        }, 300);
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="news.js"></script>
 
     </body>
 </html>
