@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color:#fff;
     color: #333;
+    text-align: center; /* 追加: 全文を中央揃え */
 }
 
 header h1 {
