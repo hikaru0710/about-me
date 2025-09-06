@@ -231,3 +231,6 @@
         font-size: 14px;
     }
 }
+_::-webkit-full-page-media, _:future, :root .sample {
+    background-color: cornflowerblue;
+}
