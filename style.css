@@ -99,7 +99,11 @@ nav a:hover {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 80px;
+    /* 既存 */ padding-top: 80px;
+    /* notch/safe-area を考慮（旧→新の順で併記） */
+    padding-top: calc(80px + constant(safe-area-inset-top)); /* iOS 11-12 */
+    padding-top: calc(80px + env(safe-area-inset-top));      /* iOS 13+ / Safari 13+ */
+    padding-bottom: env(safe-area-inset-bottom);
     transition: right 0.3s ease;
     box-shadow: -2px 0 5px rgba(0,0,0,0.1);
     z-index: 999;
@@ -164,6 +168,7 @@ nav a:hover {
     opacity: 0;
     z-index: 0;
     border-radius: 10px;
+    will-change: opacity; /* Safariでフェードを滑らかに */
 }
 
 .slide.active {
@@ -371,4 +376,9 @@ nav a:hover {
     .news-content-section > * + * { margin-left: 0; margin-top: 12px; }
     .news-filter > * + * { margin-left: 0; margin-top: 8px; }
   }
+}
+
+/* Safari向けの微調整（%gapが不安定な場合に固定pxに切替） */
+@supports (-webkit-touch-callout: none) {
+  .indicators { gap: 12px; }
 }

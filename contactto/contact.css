@@ -244,3 +244,18 @@
   input, select, textarea, button { -webkit-appearance: none; appearance: none; }
   body { -webkit-text-size-adjust: 100%; }
 }
+
+/* iOS Safariのビューポートとテキスト拡大抑制（ページ固有の上書き） */
+body {
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: -webkit-fill-available;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* notch環境での上下パディングを安全に確保 */
+main {
+  padding-top: calc(20px + constant(safe-area-inset-top));
+  padding-top: calc(20px + env(safe-area-inset-top));
+  padding-bottom: env(safe-area-inset-bottom);
+}

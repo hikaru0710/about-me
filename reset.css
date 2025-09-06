@@ -31,6 +31,8 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
+html { height: -webkit-fill-available; }
+
 body {
     line-height: 1;
 }
@@ -73,5 +75,14 @@ body {
     background-color:#fff;
     color: #333;
     line-height: 1.6;
+    min-height: 100vh;                 /* 旧ブラウザ */
+    min-height: 100svh;                /* Safari 16+ / iOS 16+ */
+    min-height: -webkit-fill-available;/* iOS 12-15 */
+    -webkit-text-size-adjust: 100%;    /* iOSの自動拡大抑制 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+/* タップ時のハイライト無効化（iOS Safari） */
+a, button { -webkit-tap-highlight-color: transparent; }
 
