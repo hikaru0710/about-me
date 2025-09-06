@@ -1,6 +1,6 @@
 # About Me 
 
-サイトURL: http://127.0.0.1:5500/about-me/index.html
+サイトURL: https://hikaru0710.github.io/about-me/
 
 
 このサイトは私の自己紹介のために制作しました。
