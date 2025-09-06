@@ -94,7 +94,8 @@ nav a:hover {
     top: 0;
     right: -100%;
     width: 250px;
-    height: 100vh;
+    height: 100vh;   /* 既存: 古いブラウザ向け */
+    height: 100dvh;  /* 追加: Safari 16+ / iOS 16+ */
     background-color: #f8f8f8;
     flex-direction: column;
     justify-content: flex-start;

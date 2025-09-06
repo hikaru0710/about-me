@@ -249,6 +249,7 @@
 body {
   min-height: 100vh;
   min-height: 100svh;
+  min-height: 100dvh;            /* 追加: 最新の動的vh */
   min-height: -webkit-fill-available;
   -webkit-text-size-adjust: 100%;
 }
@@ -258,4 +259,13 @@ main {
   padding-top: calc(20px + constant(safe-area-inset-top));
   padding-top: calc(20px + env(safe-area-inset-top));
   padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Safari/iOS: オートフィルの黄色背景を無効化して文字色を維持 */
+input:-webkit-autofill,
+select:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: #333;
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+  transition: background-color 9999s ease-out;
 }

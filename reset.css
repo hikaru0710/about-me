@@ -77,6 +77,7 @@ body {
     line-height: 1.6;
     min-height: 100vh;                 /* 旧ブラウザ */
     min-height: 100svh;                /* Safari 16+ / iOS 16+ */
+    min-height: 100dvh;                /* 追加 */
     min-height: -webkit-fill-available;/* iOS 12-15 */
     -webkit-text-size-adjust: 100%;    /* iOSの自動拡大抑制 */
     -webkit-font-smoothing: antialiased;
