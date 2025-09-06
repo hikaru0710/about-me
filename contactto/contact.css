@@ -231,6 +231,16 @@
         font-size: 14px;
     }
 }
-_::-webkit-full-page-media, _:future, :root .sample {
-    background-color: cornflowerblue;
+
+@supports not (gap: 1rem) {
+  .checkbox-group > * + * { margin-left: 10px; }
+  @media screen and (max-width: 480px) {
+    .checkbox-group > * + * { margin-left: 0; margin-top: 5px; }
+  }
+}
+
+/* iOS Safari 微調整（標準化） */
+@supports (-webkit-touch-callout: none) {
+  input, select, textarea, button { -webkit-appearance: none; appearance: none; }
+  body { -webkit-text-size-adjust: 100%; }
 }
